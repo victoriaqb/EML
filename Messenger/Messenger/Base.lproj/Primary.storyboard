@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="XIZ-2P-S9v">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="XIZ-2P-S9v" customClass="UserMessageTableCell" customModule="Messenger" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XIZ-2P-S9v" id="Mom-Q0-LMU">
@@ -57,6 +57,9 @@
                                         <constraint firstItem="Esj-0r-f81" firstAttribute="centerY" secondItem="Mom-Q0-LMU" secondAttribute="centerY" id="cVQ-bq-2sZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="Esj-0r-f81" id="3Bw-LM-ow2"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="B1D-e7-LWj">
                                 <rect key="frame" x="0.0" y="128" width="375" height="100"/>
@@ -65,34 +68,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ФИОФИОФИОФИОФИОФИОФИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt6-x3-UPB">
-                                            <rect key="frame" x="16" y="11" width="260.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Цитата" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-Qg-5Yy">
-                                            <rect key="frame" x="16" y="39" width="58" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Сообщение" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG2-MS-NnI">
-                                            <rect key="frame" x="16" y="68" width="95" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qso-1S-Jgy">
+                                            <rect key="frame" x="16" y="11" width="260.5" height="77.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="ФИОФИОФИОФИОФИОФИОФИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt6-x3-UPB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="260.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Цитата" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-Qg-5Yy">
+                                                    <rect key="frame" x="0.0" y="28.5" width="57.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Сообщение" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hG2-MS-NnI">
+                                                    <rect key="frame" x="0.0" y="57" width="94.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Gt6-x3-UPB" firstAttribute="leading" secondItem="jI6-Ty-oqq" secondAttribute="leading" constant="16" id="CvE-Pi-COM"/>
-                                        <constraint firstItem="hG2-MS-NnI" firstAttribute="leading" secondItem="jI6-Ty-oqq" secondAttribute="leading" constant="16" id="DrD-96-V7H"/>
-                                        <constraint firstItem="lRW-Qg-5Yy" firstAttribute="leading" secondItem="jI6-Ty-oqq" secondAttribute="leading" constant="16" id="JV5-rB-H7O"/>
-                                        <constraint firstItem="hG2-MS-NnI" firstAttribute="top" secondItem="lRW-Qg-5Yy" secondAttribute="bottom" constant="8" id="YGB-ho-ABR"/>
-                                        <constraint firstItem="lRW-Qg-5Yy" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="jI6-Ty-oqq" secondAttribute="centerY" id="hNJ-wp-mlS"/>
-                                        <constraint firstItem="Gt6-x3-UPB" firstAttribute="leading" secondItem="lRW-Qg-5Yy" secondAttribute="trailing" constant="-58" id="hX2-6U-RRu"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hG2-MS-NnI" secondAttribute="bottom" id="msv-w9-oO1"/>
-                                        <constraint firstItem="Gt6-x3-UPB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jI6-Ty-oqq" secondAttribute="top" id="xLR-WF-9tz"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qso-1S-Jgy" secondAttribute="trailingMargin" id="5wI-QL-Ssg"/>
+                                        <constraint firstItem="Qso-1S-Jgy" firstAttribute="top" secondItem="jI6-Ty-oqq" secondAttribute="topMargin" id="RdM-da-7hk"/>
+                                        <constraint firstItem="Qso-1S-Jgy" firstAttribute="centerY" secondItem="jI6-Ty-oqq" secondAttribute="centerY" id="jrO-QL-xoV"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qso-1S-Jgy" secondAttribute="bottom" id="rQS-ng-vg7"/>
+                                        <constraint firstItem="Qso-1S-Jgy" firstAttribute="leading" secondItem="jI6-Ty-oqq" secondAttribute="leadingMargin" id="tAJ-N4-01v"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -112,10 +117,10 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="PnD-lC-iS2" firstAttribute="centerY" secondItem="2zP-ZN-xoM" secondAttribute="centerY" id="4w9-5h-BFw"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PnD-lC-iS2" secondAttribute="trailing" id="97w-bx-Rx2"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="PnD-lC-iS2" secondAttribute="trailing" id="97w-bx-Rx2"/>
                                         <constraint firstItem="PnD-lC-iS2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2zP-ZN-xoM" secondAttribute="top" id="9PH-FX-nKv"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PnD-lC-iS2" secondAttribute="bottom" id="aL4-wh-lV4"/>
-                                        <constraint firstItem="PnD-lC-iS2" firstAttribute="leading" secondItem="2zP-ZN-xoM" secondAttribute="leading" constant="16" id="zJv-Zl-Cbu"/>
+                                        <constraint firstItem="PnD-lC-iS2" firstAttribute="leading" secondItem="2zP-ZN-xoM" secondAttribute="leadingMargin" id="zJv-Zl-Cbu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7709834F209C9EF0002253B7 /* UserMessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709834E209C9EF0002253B7 /* UserMessageTableCell.swift */; };
 		77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C172084D50A00988DA2 /* DocumentBrowserViewController.swift */; };
 		77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C192084D50A00988DA2 /* DocumentViewController.swift */; };
 		77B80C1C2084D50A00988DA2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C1B2084D50A00988DA2 /* Document.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7709834E209C9EF0002253B7 /* UserMessageTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageTableCell.swift; sourceTree = "<group>"; };
 		77B80C122084D50A00988DA2 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B80C172084D50A00988DA2 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		77B80C192084D50A00988DA2 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
@@ -80,9 +82,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7709834C209C993F002253B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7709834D209C9E15002253B7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7709834E209C9EF0002253B7 /* UserMessageTableCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		77B80C092084D50A00988DA2 = {
 			isa = PBXGroup;
 			children = (
+				7709834D209C9E15002253B7 /* UI */,
+				7709834C209C993F002253B7 /* Extensions */,
 				77B80C142084D50A00988DA2 /* Messenger */,
 				77B80C2D2084D50A00988DA2 /* MessengerTests */,
 				77B80C382084D50B00988DA2 /* MessengerUITests */,
@@ -271,6 +290,7 @@
 				77B80C4A2085EE0A00988DA2 /* Application.swift in Sources */,
 				77B80C482085EA1100988DA2 /* main.swift in Sources */,
 				77B80C1C2084D50A00988DA2 /* Document.swift in Sources */,
+				7709834F209C9EF0002253B7 /* UserMessageTableCell.swift in Sources */,
 				77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */,
 				77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */,
 			);
