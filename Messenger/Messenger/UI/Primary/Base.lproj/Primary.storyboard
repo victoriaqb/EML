@@ -105,7 +105,7 @@
         <!--Chat-->
         <scene sceneID="AR6-3X-Uim">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="yaY-va-QTa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Chats" storyboardName="Chat" id="yaY-va-QTa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFb-qr-RuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3172" y="877"/>
@@ -114,7 +114,7 @@
         <scene sceneID="4d0-qF-CBN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s0h-0e-AYt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="bvU-uk-XsS"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="contacts" id="bvU-uk-XsS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="amR-8e-gYg">
                         <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>

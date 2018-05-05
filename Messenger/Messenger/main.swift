@@ -16,12 +16,12 @@ public extension CommandLine {
         return ptr.pointee != nil ? unsafeBitCast(ptr, to: UnsafeMutablePointer<UnsafeMutablePointer<Int8>>!.self) : nil
     }
 }
+
 //MARK: -
 
 private extension Application {
-    class AppDelegate: UIResponder, ApplicationDelegate {
-        var finalResponder: UIResponder?
-        
+    class AppDelegate: NSObject, ApplicationDelegate {
+        private(set) var finalResponder: UIResponder?
         
         var window: UIWindow?
         

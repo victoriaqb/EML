@@ -18,6 +18,8 @@
 		77B80C482085EA1100988DA2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C472085EA1100988DA2 /* main.swift */; };
 		77B80C4A2085EE0A00988DA2 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C492085EE0A00988DA2 /* Application.swift */; };
 		E332072B209DFD4C004893DA /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E332072A209DFD4C004893DA /* Chat.storyboard */; };
+		E332072D209E15E3004893DA /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E332072C209E15E3004893DA /* ChatsViewController.swift */; };
+		E332072F209E1752004893DA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E332072E209E1752004893DA /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		77B80C472085EA1100988DA2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		77B80C492085EE0A00988DA2 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		E332072A209DFD4C004893DA /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		E332072C209E15E3004893DA /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		E332072E209E1752004893DA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				E332072A209DFD4C004893DA /* Chat.storyboard */,
+				E332072C209E15E3004893DA /* ChatsViewController.swift */,
+				E332072E209E1752004893DA /* ChatViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -323,7 +329,9 @@
 				77B80C4A2085EE0A00988DA2 /* Application.swift in Sources */,
 				77B80C482085EA1100988DA2 /* main.swift in Sources */,
 				77B80C1C2084D50A00988DA2 /* Document.swift in Sources */,
+				E332072F209E1752004893DA /* ChatViewController.swift in Sources */,
 				77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */,
+				E332072D209E15E3004893DA /* ChatsViewController.swift in Sources */,
 				77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
