@@ -124,7 +124,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="chf-Ni-3iw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="chf-Ni-3iw" customClass="ChatTableViewCell" customModule="Messenger" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="272" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="chf-Ni-3iw" id="35B-bw-rTp">
@@ -132,10 +132,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-Yl-mIN">
-                                            <rect key="frame" x="16" y="11" width="117" height="77.666666666666671"/>
+                                            <rect key="frame" x="16" y="11" width="160.33333333333334" height="77.666666666666671"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Ячейка чата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRQ-RS-E4g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="20.666666666666668"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Наименование чата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRQ-RS-E4g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="20.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -163,6 +163,11 @@
                                         <constraint firstItem="Lnu-Yl-mIN" firstAttribute="leading" secondItem="35B-bw-rTp" secondAttribute="leadingMargin" id="xlx-BG-1Fg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorLabel" destination="fM8-3B-mVJ" id="Wgx-CF-Po1"/>
+                                    <outlet property="messageLabel" destination="iRw-Ak-q95" id="2Ph-g1-frd"/>
+                                    <outlet property="titleLabel" destination="WRQ-RS-E4g" id="51P-J2-TwZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

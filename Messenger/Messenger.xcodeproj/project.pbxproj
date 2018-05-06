@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77098351209F4F37002253B7 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77098350209F4F37002253B7 /* ChatTableViewCell.swift */; };
+		77098353209F4FE9002253B7 /* UserMessageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77098352209F4FE9002253B7 /* UserMessageTableCell.swift */; };
 		77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C172084D50A00988DA2 /* DocumentBrowserViewController.swift */; };
 		77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C192084D50A00988DA2 /* DocumentViewController.swift */; };
 		77B80C1C2084D50A00988DA2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C1B2084D50A00988DA2 /* Document.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77098350209F4F37002253B7 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		77098352209F4FE9002253B7 /* UserMessageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageTableCell.swift; sourceTree = "<group>"; };
 		77B80C122084D50A00988DA2 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B80C172084D50A00988DA2 /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
 		77B80C192084D50A00988DA2 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				E332072A209DFD4C004893DA /* Chat.storyboard */,
+				77098350209F4F37002253B7 /* ChatTableViewCell.swift */,
+				77098352209F4FE9002253B7 /* UserMessageTableCell.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 				77B80C1C2084D50A00988DA2 /* Document.swift in Sources */,
 				77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */,
 				77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */,
+				77098351209F4F37002253B7 /* ChatTableViewCell.swift in Sources */,
+				77098353209F4FE9002253B7 /* UserMessageTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
