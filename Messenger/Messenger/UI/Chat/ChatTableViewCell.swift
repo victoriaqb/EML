@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ChatTableViewCell : UITableViewCell {
+public class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var titleLabel: UILabel?
     @IBOutlet private weak var authorLabel: UILabel?

@@ -1,5 +1,5 @@
 //
-//  UserMessageTableCell.swift
+//  UserMessageTableViewCell.swift
 //  Messenger
 //
 //  Created by Victoria Kashlina on 04/05/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class UserMessageTableCell: UITableViewCell {
+public class UserMessageTableViewCell: UITableViewCell {
     @IBOutlet private weak var messageLabel: UILabel?
     
     public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
