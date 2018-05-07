@@ -11,14 +11,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Chats-->
         <scene sceneID="B6p-TZ-bZq">
             <objects>
-                <viewController id="amB-iA-76N" sceneMemberID="viewController">
+                <viewController id="amB-iA-76N" userLabel="Chats" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kkr-eD-QQK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKm-On-oNz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <connections>
+                                    <segue destination="pAS-Da-GmS" kind="embed" id="Woh-uH-aAD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AKm-On-oNz" firstAttribute="leading" secondItem="cg0-U0-bqf" secondAttribute="leading" id="5ou-6z-aOt"/>
+                            <constraint firstItem="cg0-U0-bqf" firstAttribute="trailing" secondItem="AKm-On-oNz" secondAttribute="trailing" id="dVW-YT-glD"/>
+                            <constraint firstItem="AKm-On-oNz" firstAttribute="top" secondItem="cg0-U0-bqf" secondAttribute="top" id="j2J-2f-0kb"/>
+                            <constraint firstItem="cg0-U0-bqf" firstAttribute="bottom" secondItem="AKm-On-oNz" secondAttribute="bottom" id="lRy-zJ-352"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cg0-U0-bqf"/>
                     </view>
                 </viewController>
@@ -26,12 +40,41 @@
             </objects>
             <point key="canvasLocation" x="346" y="-457"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eNd-23-8TY">
+            <objects>
+                <viewController id="zsX-F7-blI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJW-Ih-ZzR" userLabel="Chat">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OA-2d-m8h">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <connections>
+                                    <segue destination="pAS-Da-GmS" kind="embed" id="o4w-lB-ksf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xEW-ZA-X5O" firstAttribute="bottom" secondItem="4OA-2d-m8h" secondAttribute="bottom" id="1D1-ZI-JFH"/>
+                            <constraint firstItem="4OA-2d-m8h" firstAttribute="leading" secondItem="xEW-ZA-X5O" secondAttribute="leading" id="PyR-OF-oYQ"/>
+                            <constraint firstItem="4OA-2d-m8h" firstAttribute="top" secondItem="xEW-ZA-X5O" secondAttribute="top" id="QMv-1r-5XV"/>
+                            <constraint firstItem="xEW-ZA-X5O" firstAttribute="trailing" secondItem="4OA-2d-m8h" secondAttribute="trailing" id="b6d-m0-FQE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xEW-ZA-X5O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K91-3r-T1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="345" y="240"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="Dja-mQ-l23">
             <objects>
                 <tableViewController id="pAS-Da-GmS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0uB-Cd-bJX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -43,15 +86,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="ТакоТакойакой" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-8F-Sf8">
-                                            <rect key="frame" x="16.000000000000007" y="40" width="120.66666666666669" height="20.333333333333329"/>
+                                            <rect key="frame" x="238.33333333333334" y="40" width="120.66666666666666" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CMB-8F-Sf8" secondAttribute="trailing" id="3If-AX-wJP"/>
-                                        <constraint firstItem="CMB-8F-Sf8" firstAttribute="leading" secondItem="UWI-YR-qsh" secondAttribute="leading" constant="16" id="Jvn-wo-bQA"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CMB-8F-Sf8" secondAttribute="trailing" id="3If-AX-wJP"/>
+                                        <constraint firstItem="CMB-8F-Sf8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UWI-YR-qsh" secondAttribute="leadingMargin" id="Jvn-wo-bQA"/>
                                         <constraint firstItem="CMB-8F-Sf8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UWI-YR-qsh" secondAttribute="top" id="MgG-Fz-0Nz"/>
                                         <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="CMB-8F-Sf8" secondAttribute="bottom" id="cgG-H7-ttf"/>
                                         <constraint firstItem="CMB-8F-Sf8" firstAttribute="centerY" secondItem="UWI-YR-qsh" secondAttribute="centerY" id="rfe-eD-Q4y"/>
@@ -69,7 +112,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-c3-HsR">
-                                            <rect key="frame" x="16" y="11" width="260.33333333333331" height="77.666666666666671"/>
+                                            <rect key="frame" x="98.666666666666657" y="11" width="260.33333333333337" height="77.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="ФИОФИОФИОФИОФИОФИОФИ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wk-Mv-VpK">
                                                     <rect key="frame" x="0.0" y="0.0" width="260.33333333333331" height="20.666666666666668"/>
@@ -94,35 +137,50 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Qv2-c3-HsR" firstAttribute="top" secondItem="uIY-K7-Z83" secondAttribute="topMargin" id="4GJ-ZT-wKR"/>
-                                        <constraint firstItem="Qv2-c3-HsR" firstAttribute="leading" secondItem="uIY-K7-Z83" secondAttribute="leadingMargin" id="Bes-At-V3D"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qv2-c3-HsR" secondAttribute="trailingMargin" id="PlN-4a-LcD"/>
+                                        <constraint firstItem="Qv2-c3-HsR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uIY-K7-Z83" secondAttribute="leadingMargin" id="Bes-At-V3D"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Qv2-c3-HsR" secondAttribute="trailing" id="PlN-4a-LcD"/>
                                         <constraint firstItem="Qv2-c3-HsR" firstAttribute="centerY" secondItem="uIY-K7-Z83" secondAttribute="centerY" id="ax9-qT-T4M"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Qv2-c3-HsR" secondAttribute="bottom" id="oHj-6v-7jP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HYu-bm-wEV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HYu-bm-wEV" customClass="UserStickerTableViewCell" customModule="Messenger" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HYu-bm-wEV" id="FeS-YL-BE8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стикер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-2b-eES">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Стикер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-2b-eES">
                                             <rect key="frame" x="16" y="11.666666666666664" width="58" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="DdK-if-mKQ">
+                                            <rect key="frame" x="159" y="11" width="200" height="22"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lGk-2b-eES" secondAttribute="bottom" id="13u-O8-Pjb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="DdK-if-mKQ" secondAttribute="trailing" id="3pk-0U-ab6"/>
                                         <constraint firstItem="lGk-2b-eES" firstAttribute="centerY" secondItem="FeS-YL-BE8" secondAttribute="centerY" id="7ux-jJ-gyG"/>
                                         <constraint firstItem="lGk-2b-eES" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FeS-YL-BE8" secondAttribute="top" id="IIX-jz-bsp"/>
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="lGk-2b-eES" secondAttribute="trailing" id="cIv-45-gPC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DdK-if-mKQ" secondAttribute="bottom" id="cZO-6k-pL0"/>
+                                        <constraint firstItem="DdK-if-mKQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FeS-YL-BE8" secondAttribute="leadingMargin" id="jhy-Dp-g39"/>
                                         <constraint firstItem="lGk-2b-eES" firstAttribute="leading" secondItem="FeS-YL-BE8" secondAttribute="leadingMargin" id="jwL-Ud-WC2"/>
+                                        <constraint firstItem="DdK-if-mKQ" firstAttribute="top" secondItem="FeS-YL-BE8" secondAttribute="topMargin" id="sHe-ay-6ui"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="lGk-2b-eES"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="lGk-2b-eES" id="VBc-i4-ewu"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="chf-Ni-3iw" customClass="ChatTableViewCell" customModule="Messenger" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="272" width="375" height="100"/>
@@ -132,7 +190,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillProportionally" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-Yl-mIN">
-                                            <rect key="frame" x="16" y="11" width="160.33333333333334" height="77.666666666666671"/>
+                                            <rect key="frame" x="198.66666666666663" y="11" width="160.33333333333337" height="77.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Наименование чата" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRQ-RS-E4g">
                                                     <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="20.666666666666668"/>
@@ -159,8 +217,8 @@
                                         <constraint firstItem="Lnu-Yl-mIN" firstAttribute="top" secondItem="35B-bw-rTp" secondAttribute="topMargin" id="0Rj-LC-beb"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Lnu-Yl-mIN" secondAttribute="bottom" id="61O-Zo-QSl"/>
                                         <constraint firstItem="Lnu-Yl-mIN" firstAttribute="centerY" secondItem="35B-bw-rTp" secondAttribute="centerY" id="FlO-Hg-8r9"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lnu-Yl-mIN" secondAttribute="trailingMargin" id="XkC-GJ-UNT"/>
-                                        <constraint firstItem="Lnu-Yl-mIN" firstAttribute="leading" secondItem="35B-bw-rTp" secondAttribute="leadingMargin" id="xlx-BG-1Fg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Lnu-Yl-mIN" secondAttribute="trailing" id="XkC-GJ-UNT"/>
+                                        <constraint firstItem="Lnu-Yl-mIN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="35B-bw-rTp" secondAttribute="leadingMargin" id="xlx-BG-1Fg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -175,10 +233,15 @@
                             <outlet property="delegate" destination="pAS-Da-GmS" id="PCG-d0-Y5b"/>
                         </connections>
                     </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1600"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KRp-jn-ZZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="962"/>
+            <point key="canvasLocation" x="1614" y="-581"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="o4w-lB-ksf"/>
+    </inferredMetricsTieBreakers>
 </document>

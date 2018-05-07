@@ -8,9 +8,7 @@
 
 import UIKit
 
-public class UserQuoteTableViewCell: ChatTableViewCell {
-    
-    // надо ли делать свои проперти
+public class UserQuoteTableViewCell: UserMessageTableViewCell {
     
     @IBOutlet private weak var visavisNameLabel: UILabel?
     @IBOutlet private weak var visavisquoteLabel: UILabel?

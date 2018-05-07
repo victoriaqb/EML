@@ -1,0 +1,12 @@
+[submodule "Externals/TelegramCore"]
+	path = Externals/TelegramCore
+	url = git@github.com:peter-iakovlev/TelegramCore.git
+[submodule "Externals/MtProtoKit"]
+	path = Externals/MtProtoKit
+	url = git@github.com:peter-iakovlev/MtProtoKit.git
+[submodule "Externals/Postbox"]
+	path = Externals/Postbox
+	url = git@github.com:peter-iakovlev/Postbox.git
+[submodule "Externals/Signals"]
+	path = Externals/Signals
+	url = git@github.com:peter-iakovlev/Signals.git

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Externals">
+      <FileRef
+         location = "group:Externals/MtProtoKit/MtProtoKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Externals/Signals/SSignalKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Externals/Postbox/Postbox.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Externals/TelegramCore/TelegramCore.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Messenger/Messenger.xcodeproj">
    </FileRef>
