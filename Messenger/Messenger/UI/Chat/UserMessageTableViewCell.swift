@@ -26,4 +26,26 @@ public class UserMessageTableViewCell: UITableViewCell {
     public override func prepareForReuse() {
         self.messageLabel?.text = nil
     }
+    
+    //MAKR: -
+    
+    var messageText: String? {
+        get {
+            return messageLabel?.text
+        }
+        
+        set {
+            messageLabel?.text = newValue
+        }
+    }
+    
+    var messageAttributedText: NSAttributedString? {
+        get {
+            return messageLabel?.attributedText
+        }
+        
+        set {
+            messageLabel?.attributedText = newValue
+        }
+    }
 }
