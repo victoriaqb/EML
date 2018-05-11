@@ -10,4 +10,20 @@ import UIKit
 
 public final class AuthenticationViewController: UIViewController {
     
+    @IBAction public func action(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction public func done(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction public func dismiss(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction public func discard(for unwindSegue: UIStoryboardSegue) {
+        
+    }
+    
 }

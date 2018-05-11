@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Credentials-->
+        <scene sceneID="HyZ-4m-T19">
+            <objects>
+                <viewController storyboardIdentifier="authentication" id="lOc-xH-J1V" customClass="AuthenticationViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yBf-QI-sQo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IKc-ve-Cx1">
+                                <rect key="frame" x="88" y="295.5" width="200" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-a6-gYt">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Avb-Bo-rVo">
+                                        <rect key="frame" x="0.0" y="46" width="200" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="FO1-dg-HuB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MD4-4R-hZi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IKc-ve-Cx1" secondAttribute="trailing" id="56Z-Om-RuC"/>
+                            <constraint firstItem="IKc-ve-Cx1" firstAttribute="centerY" secondItem="yBf-QI-sQo" secondAttribute="centerY" id="FdN-Ik-v6G"/>
+                            <constraint firstItem="IKc-ve-Cx1" firstAttribute="centerX" secondItem="yBf-QI-sQo" secondAttribute="centerX" id="V29-iB-TDa"/>
+                            <constraint firstItem="IKc-ve-Cx1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MD4-4R-hZi" secondAttribute="top" id="ctZ-PV-n23"/>
+                            <constraint firstItem="MD4-4R-hZi" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IKc-ve-Cx1" secondAttribute="bottom" id="gE0-Ab-zVf"/>
+                            <constraint firstItem="IKc-ve-Cx1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MD4-4R-hZi" secondAttribute="leading" id="qSM-Ie-LMB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MD4-4R-hZi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Credentials" id="Qla-hO-uw5"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="Rxf-kM-WSy" kind="show" id="0mX-YD-ZNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgu-O2-jXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122.40000000000001" y="170.46476761619192"/>
+        </scene>
+        <!--Security code-->
+        <scene sceneID="FoR-zO-afk">
+            <objects>
+                <viewController id="Rxf-kM-WSy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQY-1g-wtl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lR0-b4-1V0">
+                                <rect key="frame" x="132.5" y="318.5" width="110.5" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Security code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8IJ-ZL-3U2">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twY-bG-BoV" userLabel="Таймер">
+                                        <rect key="frame" x="34.5" y="-318.5" width="42" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-Q2-vWY">
+                                        <rect key="frame" x="-14.5" y="-318.5" width="140" height="0.0"/>
+                                        <state key="normal" title="Переотправить код"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N3k-XI-3dW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lR0-b4-1V0" secondAttribute="trailing" id="9hP-dd-6Lf"/>
+                            <constraint firstItem="lR0-b4-1V0" firstAttribute="centerX" secondItem="cQY-1g-wtl" secondAttribute="centerX" id="E3G-j1-NWH"/>
+                            <constraint firstItem="lR0-b4-1V0" firstAttribute="centerY" secondItem="cQY-1g-wtl" secondAttribute="centerY" id="Up5-Qa-3Yb"/>
+                            <constraint firstItem="lR0-b4-1V0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="N3k-XI-3dW" secondAttribute="leading" id="WX4-Tw-379"/>
+                            <constraint firstItem="N3k-XI-3dW" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lR0-b4-1V0" secondAttribute="bottom" id="wL8-iz-hcd"/>
+                            <constraint firstItem="lR0-b4-1V0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N3k-XI-3dW" secondAttribute="top" id="zps-em-SeI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N3k-XI-3dW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Security code" id="47r-jD-gSD"/>
+                    <connections>
+                        <segue destination="Lfl-oT-pgk" kind="show" id="Ca4-BK-Zxx"/>
+                        <segue destination="4zq-2V-Tvc" kind="unwind" unwindAction="dismissFor:" id="7Dc-nA-6D7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aoq-DP-oDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4zq-2V-Tvc" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="170"/>
+        </scene>
+        <!--authentication-->
+        <scene sceneID="sQ6-kP-wbf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Verification" referencedIdentifier="authentication" id="Lfl-oT-pgk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnv-Hn-UMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="170"/>
+        </scene>
+    </scenes>
+</document>

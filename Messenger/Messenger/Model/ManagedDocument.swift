@@ -29,9 +29,9 @@ import Foundation
 import UIKit
 import CoreData
 
-import AAIFoundation
-import AAICoreData
-
+//import AAIFoundation
+//import AAICoreData
+/*
 protocol PrimaryDocument {
     static func primaryDocumentName() -> String
     
@@ -110,3 +110,4 @@ extension UIManagedDocument : PrimaryDocument {
         return result
     }
 }
+*/

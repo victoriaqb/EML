@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Chat" representedClassName="Chat" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lastMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" syncable="YES"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="chats" inverseEntity="Message" syncable="YES"/>
     </entity>
-    <entity name="LocationContent" representedClassName="LocationContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class"/>
+    <entity name="LocationContent" representedClassName="LocationContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class">
+        <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
     <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,31 +19,33 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="message" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" inverseName="content" inverseEntity="Message" syncable="YES"/>
     </entity>
-    <entity name="PhotoContent" representedClassName="PhotoContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class"/>
+    <entity name="PhotoContent" representedClassName="PhotoContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class">
+        <attribute name="imageURI" optional="YES" attributeType="URI" syncable="YES"/>
+    </entity>
     <entity name="Settings" representedClassName="Settings" syncable="YES" codeGenerationType="class">
-        <attribute name="attribute" optional="YES" syncable="YES"/>
+        <attribute name="attribute" optional="YES" attributeType="Transformable" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="settings" inverseEntity="User" syncable="YES"/>
     </entity>
     <entity name="SticketContent" representedClassName="SticketContent" parentEntity="TextContent" syncable="YES" codeGenerationType="class"/>
     <entity name="TextContent" representedClassName="TextContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class"/>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="firstName" optional="YES" syncable="YES"/>
-        <attribute name="id" optional="YES" syncable="YES"/>
-        <attribute name="lastName" optional="YES" syncable="YES"/>
-        <attribute name="nickname" optional="YES" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="messages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" inverseName="author" inverseEntity="Message" syncable="YES"/>
         <relationship name="settings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Settings" inverseName="user" inverseEntity="Settings" syncable="YES"/>
     </entity>
     <configuration name="Configuration"/>
     <elements>
-        <element name="User" positionX="-16686" positionY="-12562" width="128" height="133"/>
-        <element name="Chat" positionX="-16902" positionY="-12258" width="128" height="88"/>
+        <element name="Chat" positionX="-16902" positionY="-12258" width="128" height="90"/>
+        <element name="LocationContent" positionX="-16623" positionY="-12276" width="128" height="60"/>
         <element name="Message" positionX="-16598" positionY="-12087" width="128" height="118"/>
-        <element name="Settings" positionX="-16659" positionY="-12250" width="128" height="73"/>
         <element name="MessageContent" positionX="-16344" positionY="-12099" width="128" height="75"/>
-        <element name="TextContent" positionX="-16578" positionY="-12231" width="128" height="45"/>
+        <element name="PhotoContent" positionX="-16614" positionY="-12267" width="128" height="60"/>
+        <element name="Settings" positionX="-16659" positionY="-12250" width="128" height="75"/>
         <element name="SticketContent" positionX="-16569" positionY="-12222" width="128" height="45"/>
-        <element name="LocationContent" positionX="-16623" positionY="-12276" width="128" height="45"/>
-        <element name="PhotoContent" positionX="-16614" positionY="-12267" width="128" height="45"/>
+        <element name="TextContent" positionX="-16578" positionY="-12231" width="128" height="45"/>
+        <element name="User" positionX="-16686" positionY="-12562" width="128" height="135"/>
     </elements>
 </model>

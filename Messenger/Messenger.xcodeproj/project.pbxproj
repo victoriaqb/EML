@@ -21,11 +21,14 @@
 		77B80C482085EA1100988DA2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C472085EA1100988DA2 /* main.swift */; };
 		77B80C4A2085EE0A00988DA2 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B80C492085EE0A00988DA2 /* Application.swift */; };
 		77F5F16420A1E320005B5CEF /* ManagedDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F16320A1E320005B5CEF /* ManagedDocument.swift */; };
-		77F5F16720A1E38E005B5CEF /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F5F16620A1E38E005B5CEF /* Storyboard.storyboard */; };
+		77F5F16720A1E38E005B5CEF /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F5F16620A1E38E005B5CEF /* Authentication.storyboard */; };
 		77F5F16920A1E3FC005B5CEF /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F16820A1E3FC005B5CEF /* AuthenticationViewController.swift */; };
 		77F5F16C20A1E52D005B5CEF /* UnwindActionsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F16B20A1E52D005B5CEF /* UnwindActionsTarget.swift */; };
 		77F5F16E20A1E55B005B5CEF /* StandardUnwindActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F16D20A1E55B005B5CEF /* StandardUnwindActions.swift */; };
 		77F5F17120A1E661005B5CEF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F16F20A1E661005B5CEF /* Model.xcdatamodeld */; };
+		77F5F17420A47688005B5CEF /* Verification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F5F17320A47688005B5CEF /* Verification.storyboard */; };
+		77F5F17620A477A4005B5CEF /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F17520A477A4005B5CEF /* UIViewController+Extensions.swift */; };
+		77F5F17820A48152005B5CEF /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F5F17720A48152005B5CEF /* SplitViewController.swift */; };
 		E332072B209DFD4C004893DA /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E332072A209DFD4C004893DA /* Chat.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -67,11 +70,14 @@
 		77B80C472085EA1100988DA2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		77B80C492085EE0A00988DA2 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		77F5F16320A1E320005B5CEF /* ManagedDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedDocument.swift; sourceTree = "<group>"; };
-		77F5F16620A1E38E005B5CEF /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		77F5F16620A1E38E005B5CEF /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		77F5F16820A1E3FC005B5CEF /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		77F5F16B20A1E52D005B5CEF /* UnwindActionsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwindActionsTarget.swift; sourceTree = "<group>"; };
 		77F5F16D20A1E55B005B5CEF /* StandardUnwindActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardUnwindActions.swift; sourceTree = "<group>"; };
 		77F5F17020A1E661005B5CEF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		77F5F17320A47688005B5CEF /* Verification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Verification.storyboard; sourceTree = "<group>"; };
+		77F5F17520A477A4005B5CEF /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		77F5F17720A48152005B5CEF /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		E332072A209DFD4C004893DA /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +161,7 @@
 		77F5F16520A1E36C005B5CEF /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				77F5F16620A1E38E005B5CEF /* Storyboard.storyboard */,
+				77F5F16620A1E38E005B5CEF /* Authentication.storyboard */,
 				77F5F16820A1E3FC005B5CEF /* AuthenticationViewController.swift */,
 			);
 			path = Authentication;
@@ -170,9 +176,18 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		77F5F17220A47648005B5CEF /* Two-Step Vwrification */ = {
+			isa = PBXGroup;
+			children = (
+				77F5F17320A47688005B5CEF /* Verification.storyboard */,
+			);
+			path = "Two-Step Vwrification";
+			sourceTree = "<group>";
+		};
 		E3320724209DFBB2004893DA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				77F5F17220A47648005B5CEF /* Two-Step Vwrification */,
 				77F5F16520A1E36C005B5CEF /* Authentication */,
 				77B80C222084D50A00988DA2 /* LaunchScreen.storyboard */,
 				E3320728209DFC44004893DA /* Primary */,
@@ -187,6 +202,7 @@
 		E3320725209DFBBF004893DA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77F5F17520A477A4005B5CEF /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				77B80C1D2084D50A00988DA2 /* Primary.storyboard */,
+				77F5F17720A48152005B5CEF /* SplitViewController.swift */,
 			);
 			path = Primary;
 			sourceTree = "<group>";
@@ -339,7 +356,8 @@
 				77B80C212084D50A00988DA2 /* Assets.xcassets in Resources */,
 				E332072B209DFD4C004893DA /* Chat.storyboard in Resources */,
 				77B80C1F2084D50A00988DA2 /* Primary.storyboard in Resources */,
-				77F5F16720A1E38E005B5CEF /* Storyboard.storyboard in Resources */,
+				77F5F16720A1E38E005B5CEF /* Authentication.storyboard in Resources */,
+				77F5F17420A47688005B5CEF /* Verification.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +387,13 @@
 				77B80C4A2085EE0A00988DA2 /* Application.swift in Sources */,
 				77B80C482085EA1100988DA2 /* main.swift in Sources */,
 				77B80C1A2084D50A00988DA2 /* DocumentViewController.swift in Sources */,
+				77F5F17820A48152005B5CEF /* SplitViewController.swift in Sources */,
 				77B80C182084D50A00988DA2 /* DocumentBrowserViewController.swift in Sources */,
 				77F5F16920A1E3FC005B5CEF /* AuthenticationViewController.swift in Sources */,
 				77098357209F85C4002253B7 /* UserStickerTableViewCell.swift in Sources */,
 				77098351209F4F37002253B7 /* ChatTableViewCell.swift in Sources */,
 				77098353209F4FE9002253B7 /* UserMessageTableViewCell.swift in Sources */,
+				77F5F17620A477A4005B5CEF /* UIViewController+Extensions.swift in Sources */,
 				77F5F16C20A1E52D005B5CEF /* UnwindActionsTarget.swift in Sources */,
 				77F5F17120A1E661005B5CEF /* Model.xcdatamodeld in Sources */,
 				77098355209F8592002253B7 /* UserQuoteTableViewCell.swift in Sources */,

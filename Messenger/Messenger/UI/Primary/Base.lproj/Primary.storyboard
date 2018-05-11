@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6F-Ke-xCl">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jrx-2I-b5Q">
-                                <rect key="frame" x="0.0" y="44" width="295" height="321"/>
+                                <rect key="frame" x="0.0" y="32" width="295" height="350"/>
                                 <connections>
                                     <segue destination="yaY-va-QTa" kind="embed" id="BQd-7e-CLs"/>
                                 </connections>
@@ -89,23 +89,50 @@
             </objects>
             <point key="canvasLocation" x="1006" y="1317"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cAy-6O-GIh">
+            <objects>
+                <navigationController id="T2C-oO-WSj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vF0-Hn-a3I">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c6f-ix-qZ1" kind="relationship" relationship="rootViewController" id="6Lu-BU-4sg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R90-DA-PHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="1741"/>
+        </scene>
+        <!--authentication-->
+        <scene sceneID="Yw7-VJ-K54">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Authentication" referencedIdentifier="authentication" id="c6f-ix-qZ1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7ep-YX-5GV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqG-lX-nmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="1741"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="ON5-MM-Z5U">
             <objects>
-                <splitViewController id="g6F-Ke-xCl" sceneMemberID="viewController">
+                <splitViewController id="g6F-Ke-xCl" customClass="SplitViewController" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="WYC-ht-JXT" kind="relationship" relationship="detailViewController" id="7iN-ij-tcS"/>
                         <segue destination="DuU-NX-L4M" kind="relationship" relationship="masterViewController" id="SKs-w6-VxL"/>
+                        <segue destination="T2C-oO-WSj" kind="presentation" identifier="authentication" id="Ktw-HU-6W2"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kef-Xh-0Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="846"/>
         </scene>
-        <!--Chat-->
+        <!--chats-->
         <scene sceneID="AR6-3X-Uim">
             <objects>
-                <viewControllerPlaceholder storyboardName="Chat" id="yaY-va-QTa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="chats" id="yaY-va-QTa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFb-qr-RuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3172" y="877"/>
@@ -117,7 +144,7 @@
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="bvU-uk-XsS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="amR-8e-gYg">
-                        <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -136,7 +163,7 @@
                     <tabBarItem key="tabBarItem" title="Chats" id="TYj-2N-yK1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="erc-YI-H58">
-                        <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="295" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
