@@ -12,4 +12,19 @@ public class UserStickerTableViewCell: UserMessageTableViewCell {
     
     @IBOutlet public final var strickerImageView: UIImageView?
     
+    // почему не делали aDecoder и prepareForReuse
+    
+    //MAKR: -
+    
+    var stickerImage: UIImage? {
+        get {
+            return strickerImageView?.image
+        }
+        
+        set {
+            strickerImageView?.image = newValue
+        }
+    }
+    
+    
 }

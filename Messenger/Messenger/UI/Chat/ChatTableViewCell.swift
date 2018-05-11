@@ -31,6 +31,38 @@ public class ChatTableViewCell: UITableViewCell {
         self.authorLabel?.text = nil
         self.messageLabel?.text = nil
     }
+    
+    //MAKR: -
+    
+    var titleText: String? {
+        get {
+            return titleLabel?.text
+        }
+        
+        set {
+            titleLabel?.text = newValue
+        }
+    }
+    
+    var authorName: String? {
+        get {
+            return authorLabel?.text
+        }
+        
+        set {
+            authorLabel?.text = newValue
+        }
+    }
+    
+    var massageText: String? {
+        get {
+            return messageLabel?.text
+        }
+        
+        set {
+            messageLabel?.text = newValue
+        }
+    }
 }
 
 
