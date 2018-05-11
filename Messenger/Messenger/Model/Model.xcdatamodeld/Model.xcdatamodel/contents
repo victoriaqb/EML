@@ -4,6 +4,12 @@
         <attribute name="chatID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="authorName" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
         <relationship name="lastMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contacts" inverseName="newRelationship" inverseEntity="Contacts" syncable="YES"/>
+    </entity>
+    <entity name="Contacts" representedClassName="Contacts" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="userID" optional="YES" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chat" inverseName="newRelationship" inverseEntity="Chat" syncable="YES"/>
     </entity>
     <entity name="LocationContent" representedClassName="LocationContent" parentEntity="MessageContent" syncable="YES" codeGenerationType="class">
         <attribute name="position" optional="YES" attributeType="Transformable" syncable="YES"/>
@@ -48,7 +54,7 @@
     </entity>
     <configuration name="Configuration"/>
     <elements>
-        <element name="Chat" positionX="-16938" positionY="-12312" width="128" height="88"/>
+        <element name="Chat" positionX="-16938" positionY="-12312" width="128" height="103"/>
         <element name="LocationContent" positionX="-16380" positionY="-12420" width="128" height="58"/>
         <element name="Message" positionX="-16742" positionY="-12231" width="128" height="118"/>
         <element name="MessageContent" positionX="-16524" positionY="-12186" width="128" height="73"/>
@@ -58,5 +64,6 @@
         <element name="TextContent" positionX="-16290" positionY="-12267" width="128" height="73"/>
         <element name="User" positionX="-16679" positionY="-12499" width="128" height="133"/>
         <element name="VisualSentiment" positionX="-16299" positionY="-12150" width="128" height="73"/>
+        <element name="Contacts" positionX="-16929" positionY="-12447" width="128" height="88"/>
     </elements>
 </model>
